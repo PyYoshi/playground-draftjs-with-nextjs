@@ -27,7 +27,7 @@ declare module "draft-js-image-plugin" {
 
   export default createImagePlugin;
 }
-declare module "draft-js-image-plugin/modifiers/addImage" {
+declare module "draft-js-image-plugin/lib/modifiers/addImage" {
   import { EditorState } from "draft-js";
 
   declare function addImage(

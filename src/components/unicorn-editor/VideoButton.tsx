@@ -6,10 +6,10 @@ import DialogContent from "@material-ui/core/DialogContent";
 // import DialogTitle from "@material-ui/core/DialogTitle";
 import TextField from "@material-ui/core/TextField";
 import Videocam from "@material-ui/icons/Videocam";
-import { EditorState } from "draft-js";
-import * as React from "react";
+import { EditorState, convertToRaw } from "draft-js";
+import React from "react";
 
-import addVideo from "draft-js-video-plugin/video/modifiers/addVideo";
+import addVideo from "draft-js-video-plugin/lib/video/modifiers/addVideo";
 
 interface VideoButtonProps {
   theme?: any;
@@ -22,6 +22,7 @@ interface VideoButtonState {
   inputText: string;
 }
 
+// TODO: Function Componentへ移行する
 export default class VideoButton extends React.Component<
   VideoButtonProps,
   VideoButtonState
@@ -35,12 +36,21 @@ export default class VideoButton extends React.Component<
     const { theme } = this.props;
     const { isDialogOpen, inputText } = this.state;
     return (
-      <div className={theme.buttonWrapper} onMouseDown={this.preventBubblingUp}>
+      <div
+        className={
+          theme != null && theme.buttonWrapper != null
+            ? theme.buttonWrapper
+            : null
+        }
+        onMouseDown={this.preventBubblingUp}
+      >
         <button
           type="button"
           onClick={this.openDialog}
-          title="Addicionar um vídeo"
-          className={theme.button}
+          title="動画を埋め込む"
+          className={
+            theme != null && theme.button != null ? theme.button : null
+          }
         >
           <Videocam />
         </button>
@@ -56,7 +66,7 @@ export default class VideoButton extends React.Component<
               autoFocus={true}
               margin="dense"
               id="name"
-              label="Endereço do vídeo"
+              label="動画URLを入力してください"
               type="url"
               fullWidth={true}
               value={inputText}
@@ -65,10 +75,10 @@ export default class VideoButton extends React.Component<
           </DialogContent>
           <DialogActions>
             <Button onClick={this.closeDialog} color="primary">
-              Cancelar
+              キャンセル
             </Button>
             <Button onClick={this.addVideo} color="primary">
-              Enviar
+              埋め込む
             </Button>
           </DialogActions>
         </Dialog>
@@ -84,7 +94,11 @@ export default class VideoButton extends React.Component<
     const { getEditorState, setEditorState } = this.props;
     const { inputText } = this.state;
 
+    console.log(inputText);
     const newState = addVideo(getEditorState(), { src: inputText });
+    console.log(
+      JSON.stringify(convertToRaw(newState.getCurrentContent()), null, 2)
+    );
     setEditorState(newState);
     this.setState({ inputText: "" });
     this.closeDialog();

@@ -1,11 +1,12 @@
 import AddPhotoAlternate from "@material-ui/icons/AddPhotoAlternate";
 import { EditorState } from "draft-js";
-import * as React from "react";
+import React from "react";
+import { DraftJsButtonTheme } from "draft-js-buttons";
 
-import addImage from "draft-js-image-plugin/modifiers/addImage";
+import addImage from "draft-js-image-plugin/lib/modifiers/addImage";
 
 interface ImageButtonProps {
-  theme?: any;
+  theme?: DraftJsButtonTheme;
   getEditorState: () => EditorState;
   setEditorState: (editorState: EditorState) => void;
 }
@@ -19,12 +20,21 @@ export default class ImageButton extends React.Component<
   public render() {
     const { theme } = this.props;
     return (
-      <div className={theme.buttonWrapper} onMouseDown={this.preventBubblingUp}>
+      <div
+        className={
+          theme != null && theme.buttonWrapper != null
+            ? theme.buttonWrapper
+            : undefined
+        }
+        onMouseDown={this.preventBubblingUp}
+      >
         <button
           type="button"
           onClick={this.onClick}
           title="Adicionar uma imagem"
-          className={theme.button}
+          className={
+            theme != null && theme.button != null ? theme.button : undefined
+          }
         >
           <AddPhotoAlternate />
           <input

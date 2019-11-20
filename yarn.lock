@@ -2135,6 +2135,11 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
+decorate-component-with-props@^1.0.2:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/decorate-component-with-props/-/decorate-component-with-props-1.1.0.tgz#b496c814c6a2aba0cf2ad26e44cbedb8ead42f15"
+  integrity sha512-tTYQojixN64yK3/WBODMfvss/zbmyUx9HQXhzSxZiSiofeekVeRyyuToy9BCiTMrVEIKWxTcla2t3y5qdaUF7Q==
+
 deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
@@ -2273,6 +2278,15 @@ draft-js-buttons@^2.0.1:
   dependencies:
     clsx "^1.0.4"
 
+draft-js-divider-plugin@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/draft-js-divider-plugin/-/draft-js-divider-plugin-0.2.1.tgz#5dbbb14216a0d77bf8206797ceb4c7c77df46db7"
+  integrity sha512-a5JADw8sy1gBndmNKYatEAyGHLBJhq52bSX/j0CIS99mnUWPT5ZGsm+nuTh1ViOhIsXP/nWS+5iPieI1Vtr+zg==
+  dependencies:
+    decorate-component-with-props "^1.0.2"
+    prop-types "^15.5.8"
+    union-class-names "^1.0.0"
+
 draft-js-drag-n-drop-plugin@latest:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/draft-js-drag-n-drop-plugin/-/draft-js-drag-n-drop-plugin-2.0.4.tgz#082b72ab2f8201129a5d9ab527dc199c0d74fed6"
@@ -2380,7 +2394,7 @@ draft-js-undo-plugin@latest:
     clsx "^1.0.4"
     prop-types "^15.5.8"
 
-draft-js-video-plugin@latest:
+draft-js-video-plugin@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/draft-js-video-plugin/-/draft-js-video-plugin-2.0.2.tgz#59cd581d4df5edc62e83e7195c2d37a0f31df2b9"
   integrity sha512-mp6OCyVahsRNTjz5saZvDEqJIycyYk+6uRYq7Dv2aAzAYjY8rOVBv8x7DBEFUefWe9Lh0PgGg7tVgchD2ZbT3Q==
