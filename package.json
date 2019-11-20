@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "latest",
-    "@material-ui/icons": "^4.5.1",
+    "@material-ui/icons": "latest",
     "clsx": "latest",
     "draft-js": "latest",
     "draft-js-alignment-plugin": "latest",
@@ -17,11 +17,11 @@
     "draft-js-linkify-plugin": "latest",
     "draft-js-mention-plugin": "latest",
     "draft-js-plugins-editor": "latest",
-    "draft-js-resizeable-plugin": "^2.0.9",
+    "draft-js-resizeable-plugin": "latest",
     "draft-js-side-toolbar-plugin": "latest",
     "draft-js-sticker-plugin": "latest",
     "draft-js-undo-plugin": "latest",
-    "draft-js-video-plugin": "^2.0.2",
+    "draft-js-video-plugin": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
@@ -34,7 +34,7 @@
   "devDependencies": {
     "@types/draft-js": "latest",
     "@types/next": "latest",
-    "@types/node": "^12.12.11",
+    "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@zeit/next-css": "latest",

@@ -846,7 +846,7 @@
     prop-types "^15.7.2"
     react-transition-group "^4.3.0"
 
-"@material-ui/icons@^4.5.1":
+"@material-ui/icons@latest":
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-4.5.1.tgz#6963bad139e938702ece85ca43067688018f04f8"
   integrity sha512-YZ/BgJbXX4a0gOuKWb30mBaHaoXRqPanlePam83JQPZ/y4kl+3aW0Wv9tlR70hB5EGAkEJGW5m4ktJwMgxQAeA==
@@ -920,7 +920,7 @@
   dependencies:
     next "*"
 
-"@types/node@^12.12.11":
+"@types/node@latest":
   version "12.12.11"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.11.tgz#bec2961975888d964196bf0016a2f984d793d3ce"
   integrity sha512-O+x6uIpa6oMNTkPuHDa9MhMMehlxLAd5QcOvKRjAFsBVpeFWTOPnXbDvILvFgFFZfQ1xh1EZi1FbXxUix+zpsQ==
@@ -2352,7 +2352,7 @@ draft-js-plugins-editor@latest:
     immutable "~3.7.4"
     prop-types "^15.5.8"
 
-draft-js-resizeable-plugin@^2.0.9:
+draft-js-resizeable-plugin@latest:
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/draft-js-resizeable-plugin/-/draft-js-resizeable-plugin-2.0.9.tgz#fd78f4b8f4729dd585fe032ee066edbc526599f8"
   integrity sha512-hInVpzSt7VK0M+j81BAfEk1S1fGo2sse+KZT8nXu7zTebdUGhJWwBjIMztYuY/NQSq+h+5MqKY40aZ6DkZ1R9w==
@@ -2380,7 +2380,7 @@ draft-js-undo-plugin@latest:
     clsx "^1.0.4"
     prop-types "^15.5.8"
 
-draft-js-video-plugin@^2.0.2:
+draft-js-video-plugin@latest:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/draft-js-video-plugin/-/draft-js-video-plugin-2.0.2.tgz#59cd581d4df5edc62e83e7195c2d37a0f31df2b9"
   integrity sha512-mp6OCyVahsRNTjz5saZvDEqJIycyYk+6uRYq7Dv2aAzAYjY8rOVBv8x7DBEFUefWe9Lh0PgGg7tVgchD2ZbT3Q==
