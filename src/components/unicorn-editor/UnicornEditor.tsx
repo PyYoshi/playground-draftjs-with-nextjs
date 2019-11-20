@@ -90,8 +90,21 @@ interface Props {
   readOnly?: boolean;
 }
 
-// TODO: ドラッグアンドドロップで画像を挿入できるようにする
-// TODO: いろいろエラーを消す
+// TODO: Undoできるようにする
+// TODO: Redoできるようにする
+// TODO: 文字サイズを変更できるようにする
+// TODO: 左寄せできるようにする
+// TODO: 中央寄せできるようにする
+// TODO: 右寄せできるようにする
+// TODO: 取り消し線を被せられるようにする
+// TODO: 文字に色をつけることができる
+// TODO: リンクをボタンで入れられるようにする
+// TODO: サイドバーのメニューをクリックで開いた状態を維持できるようにする
+// TODO: メニューにツールチップを表示できるように
+// TODO: material-uiでデザインを刷新する
+//         - 利用しているdraft-jsプラグインをすべてtypescriptで実装し直す
+//         - 書き直したライブラリのスタイルをすべてmaterial-uiベースのものに変える
+//         - material-uiのテーマシステムで扱えるようにリファクタリングをする
 // TODO: Indexeddbで下書き保存できるようにする
 // TODO: 開いた画像ファイルをアップロードできるようにする. なにかしらのラッパーライブラリを利用したほうがよさげ. https://caniuse.com/#feat=indexeddb
 // https://github.com/acaua/unicorn-editor/blob/master/src/unicorn-editor/UnicornEditor.tsx

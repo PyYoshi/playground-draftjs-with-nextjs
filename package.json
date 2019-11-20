@@ -30,7 +30,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "eslint": "eslint **/*.{ts,tsx} --fix",
+    "prettier": "prettier **/*.{ts,tsx,js,json} --write"
   },
   "devDependencies": {
     "@types/draft-js": "latest",
@@ -38,7 +40,15 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
     "@zeit/next-css": "latest",
+    "eslint": "latest",
+    "eslint-plugin-jsx-a11y": "latest",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "npm-run-all": "latest",
+    "prettier": "latest",
     "tsconfig-paths-webpack-plugin": "latest",
     "typescript": "latest"
   }

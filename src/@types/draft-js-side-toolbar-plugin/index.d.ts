@@ -10,9 +10,9 @@ declare module "draft-js-side-toolbar-plugin" {
   };
 
   type createSideToolbarPluginConfigTheme = {
-    buttonStyles: Object;
-    blockTypeSelectStyles: Object;
-    toolbarStyles: Object;
+    buttonStyles: Record<string, any>;
+    blockTypeSelectStyles: Record<string, any>;
+    toolbarStyles: Record<string, any>;
   };
 
   type createSideToolbarPluginConfig = {

@@ -28,7 +28,7 @@ declare module "draft-js-video-plugin/lib/video/modifiers/addVideo" {
   import { EditorState } from "draft-js";
 
   declare type AddVideoRef = {
-    src: Object;
+    src: Record<string, any>;
   };
 
   declare function addVideo(
