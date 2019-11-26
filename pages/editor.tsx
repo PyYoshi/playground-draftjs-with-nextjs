@@ -3,7 +3,7 @@ import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import { EditorState, convertFromRaw, RawDraftContentState } from "draft-js";
 
-import { DynamicUnicornEditor } from "../src/components/unicorn-editor/UnicornEditor";
+import { UnicornEditor } from "../src/components/unicorn-editor/UnicornEditor";
 
 export default function Editor() {
   const [editorState, setEditorState] = React.useState<EditorState>(
@@ -13,7 +13,7 @@ export default function Editor() {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
-        <DynamicUnicornEditor
+        <UnicornEditor
           editorState={editorState}
           setEditorState={setEditorState}
         />

@@ -29,7 +29,6 @@ import {
 } from "draft-js-buttons";
 import React from "react";
 import { NextPage } from "next";
-import dynamic from "next/dynamic";
 
 import ImageButton from "./ImageButton";
 
@@ -115,11 +114,24 @@ export const UnicornEditor: NextPage<Props> = props => {
 
   const editorRef = React.useRef<Editor>(null);
 
-  const focus = () => {
+  const handleEditorChange = React.useCallback((editorState: EditorState) => {
+    setEditorState(editorState);
+    // console.group();
+    // console.log(
+    //   JSON.stringify(
+    //     convertToRaw(editorState.getCurrentContent()),
+    //     null,
+    //     2
+    //   )
+    // );
+    // console.groupEnd();
+  }, []);
+
+  const focus = React.useCallback(() => {
     if (editorRef != null && editorRef.current != null) {
       editorRef.current.focus();
     }
-  };
+  }, []);
 
   return (
     <div
@@ -136,18 +148,7 @@ export const UnicornEditor: NextPage<Props> = props => {
         ref={editorRef}
         plugins={plugins}
         editorState={editorState}
-        onChange={editorState => {
-          setEditorState(editorState);
-          // console.group();
-          // console.log(
-          //   JSON.stringify(
-          //     convertToRaw(editorState.getCurrentContent()),
-          //     null,
-          //     2
-          //   )
-          // );
-          // console.groupEnd();
-        }}
+        onChange={handleEditorChange}
         readOnly={!!readOnly}
       />
       {!readOnly && (
@@ -215,14 +216,3 @@ export const UnicornEditor: NextPage<Props> = props => {
     </div>
   );
 };
-
-// SSRを利用する場合はこのコンポネントを利用すること
-// `getIn`がundefinedだっていうエラーが出てしまうことを回避する
-export const DynamicUnicornEditor = dynamic(
-  () => {
-    return new Promise<NextPage<Props>>(resolve => {
-      resolve(UnicornEditor);
-    });
-  },
-  { ssr: false }
-);
