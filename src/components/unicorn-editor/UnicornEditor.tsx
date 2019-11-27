@@ -1,37 +1,32 @@
-import "draft-js/dist/Draft.css";
-import "draft-js-alignment-plugin/lib/plugin.css";
-import "draft-js-focus-plugin/lib/plugin.css";
-import "draft-js-image-plugin/lib/plugin.css";
-import "draft-js-inline-toolbar-plugin/lib/plugin.css";
-import "draft-js-linkify-plugin/lib/plugin.css";
-import "draft-js-side-toolbar-plugin/lib/plugin.css";
+import 'draft-js/dist/Draft.css';
+import 'draft-js-alignment-plugin/lib/plugin.css';
+import 'draft-js-focus-plugin/lib/plugin.css';
+import 'draft-js-image-plugin/lib/plugin.css';
+import 'draft-js-inline-toolbar-plugin/lib/plugin.css';
+import 'draft-js-linkify-plugin/lib/plugin.css';
+import 'draft-js-side-toolbar-plugin/lib/plugin.css';
 
-import { EditorState } from "draft-js";
-import createAlignmentPlugin from "draft-js-alignment-plugin";
-import createBlockDndPlugin from "draft-js-drag-n-drop-plugin";
-import createFocusPlugin from "draft-js-focus-plugin";
-import createImagePlugin from "draft-js-image-plugin";
-import createInlineToolbarPlugin from "draft-js-inline-toolbar-plugin";
-import createLinkifyPlugin from "draft-js-linkify-plugin";
-import Editor, { composeDecorators } from "draft-js-plugins-editor";
-import createResizeablePlugin from "draft-js-resizeable-plugin";
-import createSideToolbarPlugin from "draft-js-side-toolbar-plugin";
-import createDividerPlugin from "draft-js-divider-plugin";
+import { EditorState } from 'draft-js';
+import createAlignmentPlugin from 'draft-js-alignment-plugin';
 import {
-  BlockquoteButton,
-  BoldButton,
-  HeadlineOneButton,
-  HeadlineTwoButton,
-  HeadlineThreeButton,
-  ItalicButton,
-  OrderedListButton,
-  UnorderedListButton
-} from "draft-js-buttons";
-import React from "react";
-import { NextPage } from "next";
+    BlockquoteButton, BoldButton, HeadlineOneButton, HeadlineThreeButton, HeadlineTwoButton,
+    ItalicButton, OrderedListButton, UnorderedListButton
+} from 'draft-js-buttons';
+import createDividerPlugin from 'draft-js-divider-plugin';
+import createBlockDndPlugin from 'draft-js-drag-n-drop-plugin';
+import createFocusPlugin from 'draft-js-focus-plugin';
+import createImagePlugin from 'draft-js-image-plugin';
+import createInlineToolbarPlugin from 'draft-js-inline-toolbar-plugin';
+import createLinkifyPlugin from 'draft-js-linkify-plugin';
+import Editor, { composeDecorators } from 'draft-js-plugins-editor';
+import createResizeablePlugin from 'draft-js-resizeable-plugin';
+import createSideToolbarPlugin from 'draft-js-side-toolbar-plugin';
+import { NextPage } from 'next';
+import React from 'react';
 
-import ImageButton from "./ImageButton";
+import ImageButton from './ImageButton';
 
+// TODO: 直接クラス名を呼ばなくても良いように変更する
 const sideToolbarStyles = {
   buttonStyles: {
     buttonWrapper: "draftJsToolbar__buttonWrapper__1Dmqh",

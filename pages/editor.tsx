@@ -1,9 +1,10 @@
-import React from "react";
-import Container from "@material-ui/core/Container";
-import Box from "@material-ui/core/Box";
-import { EditorState, convertFromRaw, RawDraftContentState } from "draft-js";
+import { convertFromRaw, EditorState, RawDraftContentState } from 'draft-js';
+import React from 'react';
 
-import { UnicornEditor } from "../src/components/unicorn-editor/UnicornEditor";
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+
+import { UnicornEditor } from '../src/components/unicorn-editor/UnicornEditor';
 
 export default function Editor() {
   const [editorState, setEditorState] = React.useState<EditorState>(

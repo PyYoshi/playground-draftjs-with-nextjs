@@ -1,9 +1,9 @@
-import AddPhotoAlternate from "@material-ui/icons/AddPhotoAlternate";
-import { EditorState } from "draft-js";
-import React from "react";
-import { DraftJsButtonTheme } from "draft-js-buttons";
+import { EditorState } from 'draft-js';
+import { DraftJsButtonTheme } from 'draft-js-buttons';
+import addImage from 'draft-js-image-plugin/lib/modifiers/addImage';
+import React from 'react';
 
-import addImage from "draft-js-image-plugin/lib/modifiers/addImage";
+import AddPhotoAlternate from '@material-ui/icons/AddPhotoAlternate';
 
 interface ImageButtonProps {
   theme?: DraftJsButtonTheme;
@@ -11,6 +11,7 @@ interface ImageButtonProps {
   setEditorState: (editorState: EditorState) => void;
 }
 
+// TODO: Function Componentへ変更する
 export default class ImageButton extends React.Component<
   ImageButtonProps,
   any

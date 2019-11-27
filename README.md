@@ -5,4 +5,4 @@ yarn
 yarn dev
 ```
 
-`http://localhost:3000/editor`` を開く
+`http://localhost:3000/editor` を開く
